@@ -13,7 +13,7 @@ int main (int argc, char* argv[]){
 	int wordCount=0; //统计单词数数量 
 	int i;
  
-	if((fp=fopen(filename,"rb"))==NULL){ //先写入后读出 
+	if((fp=fopen(filename,"rb"))==NULL){ 	//先写入后读出 
 		printf("文件不能打开\n");
 		exit(0);
 	}
@@ -21,9 +21,9 @@ int main (int argc, char* argv[]){
 		len=strlen(buffer);
 		for(i=0;i<len;i++){
 			c=buffer[i];
-			if(c==' ' || c=='\t'){//判断空格 或者 tab 
+			if(c==' ' || c=='\t'){	//判断空格 或者 tab 
 				if(lastBlank==0){
-					wordCount++;//单词数统计 
+					wordCount++;	//单词数统计 
 				}
 				lastBlank=1;
 			}else if(c!='\n'&&c!='\r'){//判断换行 
